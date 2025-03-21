@@ -18,10 +18,22 @@ struct AgregarSerie: View {
     var body: some View {
         Text("Hola mundo!")
         TextField("Nombre de la serie", text: $nombre_de_la_serie)
+            .frame(height: 50)
+            .background(Color.gray)
+            .padding(15)
+            
         if indicar_problemas{
             Text("Hay un problema con tu serie, no tiene nombre")
         }
+            
         TextField("Tipo", text: $tipo_de_la_serie)
+            .frame(height: 50)
+            .background(Color.gray)
+            .cornerRadius(10)
+            .padding(15)
+            
+        
+        
         Spacer()
         
         Text("Plataformas")
