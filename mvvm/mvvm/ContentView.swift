@@ -6,23 +6,22 @@
 //
 
 import SwiftUI
-
+ 
 struct ContentView: View {
     @Environment(VistaModeloBasico.self) private var controlador
+    @State var mostrar_agregar_serie : Bool = false
+    
+    
     var body: some View {
-        VStack {
-            ForEach(controlador.series_registradas){
-                Image(systemName: "plus")
-            }
+        if controlador.estado_actual_de_la_aplicacion == .mostrando_series{
+            MenuPrincipalSeries()
         }
-        .padding()
-        
-        Button("agrega por favor una serie de prueba"){
-            controlador.agregar_serie()
+        else {
+            AgregarSerie()
         }
     }
 }
-
+ 
 #Preview {
     ContentView()
         .environment(VistaModeloBasico())

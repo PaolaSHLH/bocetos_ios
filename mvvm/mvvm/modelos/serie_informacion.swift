@@ -5,29 +5,28 @@
 //  Created by alumno on 14/3/25.
 //
 import Foundation
-
-struct Temporada{
+ 
+struct Temporada: Identifiable{
+    var id = UUID()
     var nombre: String
-    var cantidadCap: Int
+    var cantidad_capitulos: Int
+    var imagen : String = ""
 }
-
-struct Plataforma{
+ 
+struct Plataforma: Identifiable{
+    var id = UUID()
     var nombre: String
-    var icono : String
+    var imagen: String
 }
-
-struct InformacionSerie : Identifiable{
-    var id:
-    
+ 
+struct InformacionSerie: Identifiable{
+    var id = UUID()
     var nombre: String
     var tipo: String
-    
-    var plataformas : [Plataforma] = [] // aqui tengo una deuda tecnica para indicar otras platarformas de manera mas sencilla
-    
-    var fechaEstreno: Int
+    var plataformas: [Plataforma] = [] //Aqui tengo una deuda tecnica para indicar otras plataformas de forma más fácil
+    var fecha_estreno: Int
     var sinopsis: String
-    
+ 
     var temporadas: [Temporada] = []
-    
     var caratula: String
 }

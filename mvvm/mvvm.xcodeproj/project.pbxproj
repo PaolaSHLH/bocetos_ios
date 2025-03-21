@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB48EF092D8DBAEE00465157 /* agregar_serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB48EF082D8DBAEE00465157 /* agregar_serie.swift */; };
+		FB48EF0B2D8DBBF100465157 /* estados_de_la_aplicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB48EF0A2D8DBBF100465157 /* estados_de_la_aplicacion.swift */; };
+		FB48EF102D8DBE8400465157 /* menu_principal_series.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB48EF0F2D8DBE8400465157 /* menu_principal_series.swift */; };
+		FB48EF132D8DC97800465157 /* plataformas_actuales.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB48EF122D8DC97800465157 /* plataformas_actuales.swift */; };
 		FB76205E2D8482A9009E7E1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76205D2D8482A9009E7E1D /* ContentView.swift */; };
 		FB7620602D8482AA009E7E1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB76205F2D8482AA009E7E1D /* Assets.xcassets */; };
 		FB7620632D8482AA009E7E1D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7620622D8482AA009E7E1D /* Preview Assets.xcassets */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB48EF082D8DBAEE00465157 /* agregar_serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = agregar_serie.swift; sourceTree = "<group>"; };
+		FB48EF0A2D8DBBF100465157 /* estados_de_la_aplicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = estados_de_la_aplicacion.swift; sourceTree = "<group>"; };
+		FB48EF0F2D8DBE8400465157 /* menu_principal_series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu_principal_series.swift; sourceTree = "<group>"; };
+		FB48EF122D8DC97800465157 /* plataformas_actuales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plataformas_actuales.swift; sourceTree = "<group>"; };
 		FB7620582D8482A9009E7E1D /* mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB76205D2D8482A9009E7E1D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB76205F2D8482AA009E7E1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +44,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB48EF072D8DBACF00465157 /* pantallas */ = {
+			isa = PBXGroup;
+			children = (
+				FB48EF082D8DBAEE00465157 /* agregar_serie.swift */,
+				FB48EF0F2D8DBE8400465157 /* menu_principal_series.swift */,
+			);
+			path = pantallas;
+			sourceTree = "<group>";
+		};
+		FB48EF0E2D8DBD3400465157 /* estados */ = {
+			isa = PBXGroup;
+			children = (
+				FB48EF0A2D8DBBF100465157 /* estados_de_la_aplicacion.swift */,
+			);
+			path = estados;
+			sourceTree = "<group>";
+		};
+		FB48EF112D8DC94F00465157 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				FB48EF122D8DC97800465157 /* plataformas_actuales.swift */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 		FB76204F2D8482A9009E7E1D = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +88,8 @@
 		FB76205A2D8482A9009E7E1D /* mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				FB48EF112D8DC94F00465157 /* assets */,
+				FB48EF072D8DBACF00465157 /* pantallas */,
 				FB76206A2D848345009E7E1D /* vistas_modelos */,
 				FB7620692D84831D009E7E1D /* modelos */,
 				FB76205D2D8482A9009E7E1D /* ContentView.swift */,
@@ -84,6 +119,7 @@
 		FB76206A2D848345009E7E1D /* vistas_modelos */ = {
 			isa = PBXGroup;
 			children = (
+				FB48EF0E2D8DBD3400465157 /* estados */,
 				FB76206D2D848B44009E7E1D /* vista_modelo_basico.swift */,
 			);
 			path = vistas_modelos;
@@ -159,10 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB48EF132D8DC97800465157 /* plataformas_actuales.swift in Sources */,
 				FB7620702D848C99009E7E1D /* primera_pantalla.swift in Sources */,
 				FB76206C2D8483EF009E7E1D /* serie_informacion.swift in Sources */,
+				FB48EF0B2D8DBBF100465157 /* estados_de_la_aplicacion.swift in Sources */,
 				FB76205E2D8482A9009E7E1D /* ContentView.swift in Sources */,
+				FB48EF092D8DBAEE00465157 /* agregar_serie.swift in Sources */,
 				FB76206E2D848B44009E7E1D /* vista_modelo_basico.swift in Sources */,
+				FB48EF102D8DBE8400465157 /* menu_principal_series.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
