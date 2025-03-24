@@ -20,6 +20,7 @@ struct AgregarSerie: View {
         TextField("Nombre de la serie", text: $nombre_de_la_serie)
             .frame(height: 50)
             .background(Color.gray)
+            .cornerRadius(10)
             .padding(15)
             
         if indicar_problemas{
