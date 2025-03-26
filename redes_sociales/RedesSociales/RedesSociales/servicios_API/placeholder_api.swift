@@ -9,15 +9,28 @@ import SwiftUI
 
 
 class PlaceHolderAPI: Codable {
-    func descargar_publicaciones(desde: String) async throws -> [Publicacion]?{
+    let url_de_servicio = "https://jsonplaceholder.typicode.com"
+
+    func descargar_publicaciones() async -> [Publicacion]?{
+        let ubicacion_recurso = "/post"
+        return await descargar(recurso: ubicacion_recurso)
+    }
+    
+    func descargar_comentarios(postId: Int) async -> [Comentario]?{
+        let ubicacion_recurso = "/post/\(postId)/comments"
+        return await descargar(recurso: ubicacion_recurso)
+    }
+    
+    func descargar<TipoGenerico:Codable>(recurso: String) async -> TipoGenerico?{
         do{
-            guard let url = URL(string: desde) else {throw ErroresDeRed.badUrl}
+            guard let url = URL(string: "\(url_de_servicio)/posts") else {throw ErroresDeRed.badUrl}
             let(datos, respuesta) = try await URLSession.shared.data(from: url)
             guard let respuesta = respuesta as? HTTPURLResponse else {throw  ErroresDeRed.badResponse}
             guard respuesta.statusCode >= 200 && respuesta.statusCode < 300 else {throw ErroresDeRed.badStatus}
-            guard let respuesta_decodificada = try? JSONDecoder().decode([Publicacion].self, from: datos) else {throw ErroresDeRed.fallaAlConvertirLaRespuesta}
+            guard let respuesta_decodificada = try? JSONDecoder().decode(TipoGenerico.self, from: datos) else {throw ErroresDeRed.fallaAlConvertirLaRespuesta}
             
             return respuesta_decodificada
+            
         }catch ErroresDeRed.badUrl{
             print("Tienes mala conexion, matate")
         }
@@ -32,6 +45,9 @@ class PlaceHolderAPI: Codable {
         }
         catch ErroresDeRed.invalidRequest {
             print("como llegaste aqui? 0-0")
+        }
+        catch{
+            print("algo muy malo paso y no se que es, no deberias de ver esto")
         }
         return nil
     }

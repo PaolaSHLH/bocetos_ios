@@ -4,7 +4,7 @@
 //
 //  Created by alumno on 24/3/25.
 //
-
+/*
 import SwiftUI
 
 class ControladorPublicaciones : ObservableObject{
@@ -17,4 +17,4 @@ class ControladorPublicaciones : ObservableObject{
         else {return}
                 publicaciones = publicaciones_descargadas
     }
-}
+}*/
