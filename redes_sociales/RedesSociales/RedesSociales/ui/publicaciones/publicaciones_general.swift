@@ -17,20 +17,20 @@ struct GenerarPublicaciones : View {
                 VStack{
                     ForEach(controlador.publicaciones){ publicacion in
                         NavigationLink{
-                        Text("Hola Mundo")
+                            PublicacionVista()
                         }label: {
                             HStack{
-                                Text("\(publicacion.id)")
+                                
                                 VStack{
+                                    Spacer()
+                                    Text("\(publicacion.id)")
+                                    Spacer()
                                     Text("\(publicacion.title)")
                                     Text("\(publicacion.body)")
                                 }
-                            }.onTapGesture {
-                                print("usted ha seleccionado: \(publicacion.id)")
                             }
-                        }
-                        
-                        
+                        }.simultaneousGesture(TapGesture().onEnded({
+                            controlador.seleccionar_publicacion(publicacion)                            }))
                     }
                 }
             }
