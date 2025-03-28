@@ -13,9 +13,12 @@ import SwiftUI
 public class ControladorAplicacion{
     var publicaciones: Array<Publicacion> = []
     var comentarios: Array<Comentario> = []
+    
 
     
     var publicacion_seleccionada: Publicacion? = nil
+    var perfil_a_mostrar: Perfil? = nil
+
     
     
     init(){
@@ -42,6 +45,7 @@ public class ControladorAplicacion{
                 comentarios = comentarios_descargados
     }
     
+    
     func seleccionar_publicacion(_ publicacion: Publicacion) -> Void{
         publicacion_seleccionada = publicacion
         
@@ -49,6 +53,17 @@ public class ControladorAplicacion{
             await  self.descargar_comentarios()
         })
         
+    }
+    
+    func descargar_perfil(id:Int) async -> Void{
+        guard let perfil:Perfil = try? await PlaceHolderAPI().descargar_perfil(id: id) else {return}
+        perfil_a_mostrar = perfil
+    }
+    
+    func ver_perfil(id: Int) -> Void{
+        Task.detached{
+            await self.descargar_perfil(id: id)
+        }
     }
     
 }
