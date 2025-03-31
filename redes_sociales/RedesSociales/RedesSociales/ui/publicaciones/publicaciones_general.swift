@@ -20,27 +20,41 @@ struct GenerarPublicaciones : View {
                             PublicacionVista()
                         }label: {
                             HStack{
-                                
-                                VStack{
+                                VStack(alignment: .leading){
                                     Spacer()
                                     Text("\(publicacion.id)")
+                                        .font(.custom("Helvetica Neue", size: 20))
+                                        .foregroundColor(.mint)
+                                        .multilineTextAlignment(.leading)
                                     Spacer()
                                     Text("\(publicacion.title)")
+                                        .font(.title)
+                                        .foregroundColor(.mint)
+                                        .multilineTextAlignment(.leading)
                                     Text("\(publicacion.body)")
+                                        .foregroundColor(.white)
+                                        .font(.custom("Helvetica Neue", size: 15))
+                                        .multilineTextAlignment(.leading)
+                                        
                                 }
+                                .padding()
+                                .frame(maxWidth: .infinity, alignment: .leading)
                             }
+                                .background(Color.gray)
+                                .cornerRadius(10)
+                                .padding()
                         }.simultaneousGesture(TapGesture().onEnded({
                             controlador.seleccionar_publicacion(publicacion)                            }))
                     }
                 }
-            }
+            }.background(Color.white)
         }
             .onAppear{
                 /*if controlador.publicaciones.isEmpty {
                     Task{
                         await controlador.obtener_publicaciones()
                 }*/
-                print("no se")
+                print("no se, estas mal en generarpublicaciones :D")
             }
         }
     }
