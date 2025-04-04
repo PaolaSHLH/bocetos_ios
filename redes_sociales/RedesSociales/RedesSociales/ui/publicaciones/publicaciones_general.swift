@@ -54,7 +54,6 @@ struct GenerarPublicaciones : View {
                     Task{
                         await controlador.obtener_publicaciones()
                 }*/
-                print("no se, estas mal en generarpublicaciones :D")
             }
         }
     }

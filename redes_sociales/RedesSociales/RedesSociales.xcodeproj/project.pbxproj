@@ -22,6 +22,12 @@
 		FBBA08532D9AECA200890170 /* menu_aplicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA08522D9AECA200890170 /* menu_aplicacion.swift */; };
 		FBBCD5F52D94534E0025B4C5 /* controlador_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBCD5F42D94534E0025B4C5 /* controlador_app.swift */; };
 		FBBCD5F72D945E880025B4C5 /* publicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBCD5F62D945E880025B4C5 /* publicacion.swift */; };
+		FBE61A9E2DA030970069B2C4 /* mono_chino.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE61A9D2DA030970069B2C4 /* mono_chino.swift */; };
+		FBE61AA02DA030EF0069B2C4 /* planeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE61A9F2DA030EF0069B2C4 /* planeta.swift */; };
+		FBE61AA22DA0312C0069B2C4 /* transformacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE61AA12DA0312C0069B2C4 /* transformacion.swift */; };
+		FBE61AA42DA031710069B2C4 /* dragonball_api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE61AA32DA031710069B2C4 /* dragonball_api.swift */; };
+		FBE61AA72DA032610069B2C4 /* pagina_resultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE61AA62DA032610069B2C4 /* pagina_resultados.swift */; };
+		FBE61AAA2DA034030069B2C4 /* pantalla_personajes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE61AA92DA034030069B2C4 /* pantalla_personajes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +47,12 @@
 		FBBA08522D9AECA200890170 /* menu_aplicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu_aplicacion.swift; sourceTree = "<group>"; };
 		FBBCD5F42D94534E0025B4C5 /* controlador_app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_app.swift; sourceTree = "<group>"; };
 		FBBCD5F62D945E880025B4C5 /* publicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicacion.swift; sourceTree = "<group>"; };
+		FBE61A9D2DA030970069B2C4 /* mono_chino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mono_chino.swift; sourceTree = "<group>"; };
+		FBE61A9F2DA030EF0069B2C4 /* planeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planeta.swift; sourceTree = "<group>"; };
+		FBE61AA12DA0312C0069B2C4 /* transformacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transformacion.swift; sourceTree = "<group>"; };
+		FBE61AA32DA031710069B2C4 /* dragonball_api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dragonball_api.swift; sourceTree = "<group>"; };
+		FBE61AA62DA032610069B2C4 /* pagina_resultados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pagina_resultados.swift; sourceTree = "<group>"; };
+		FBE61AA92DA034030069B2C4 /* pantalla_personajes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pantalla_personajes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +108,7 @@
 		FB2D59C52D91B18100C4D7DF /* modelos */ = {
 			isa = PBXGroup;
 			children = (
+				FBE61A9C2DA030420069B2C4 /* dragon_ball */,
 				FB2D59C82D91B25500C4D7DF /* Publicacion.swift */,
 				FB9A25F82D94633A00F6F507 /* comentario.swift */,
 				FB9B38242D9700F50057C2D2 /* perfil.swift */,
@@ -117,6 +130,7 @@
 			children = (
 				FB2D59CA2D91B49C00C4D7DF /* placeholder_api.swift */,
 				FB2D59CC2D91B4AA00C4D7DF /* errores.swift */,
+				FBE61AA32DA031710069B2C4 /* dragonball_api.swift */,
 			);
 			path = servicios_API;
 			sourceTree = "<group>";
@@ -124,6 +138,7 @@
 		FB2D59D02D91BDF400C4D7DF /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				FBE61AA82DA033EF0069B2C4 /* dragon_ball */,
 				FBBA08512D9AEC0400890170 /* menu_inicial */,
 				FB9B38262D9704500057C2D2 /* perfil_basico */,
 				FB2D59D12D91BDFC00C4D7DF /* publicaciones */,
@@ -154,6 +169,33 @@
 				FBBA08522D9AECA200890170 /* menu_aplicacion.swift */,
 			);
 			path = menu_inicial;
+			sourceTree = "<group>";
+		};
+		FBE61A9C2DA030420069B2C4 /* dragon_ball */ = {
+			isa = PBXGroup;
+			children = (
+				FBE61AA52DA0320A0069B2C4 /* soporte */,
+				FBE61A9D2DA030970069B2C4 /* mono_chino.swift */,
+				FBE61A9F2DA030EF0069B2C4 /* planeta.swift */,
+				FBE61AA12DA0312C0069B2C4 /* transformacion.swift */,
+			);
+			path = dragon_ball;
+			sourceTree = "<group>";
+		};
+		FBE61AA52DA0320A0069B2C4 /* soporte */ = {
+			isa = PBXGroup;
+			children = (
+				FBE61AA62DA032610069B2C4 /* pagina_resultados.swift */,
+			);
+			path = soporte;
+			sourceTree = "<group>";
+		};
+		FBE61AA82DA033EF0069B2C4 /* dragon_ball */ = {
+			isa = PBXGroup;
+			children = (
+				FBE61AA92DA034030069B2C4 /* pantalla_personajes.swift */,
+			);
+			path = dragon_ball;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,15 +270,21 @@
 			files = (
 				FBBA08532D9AECA200890170 /* menu_aplicacion.swift in Sources */,
 				FB2D59D32D91BE1900C4D7DF /* publicaciones_general.swift in Sources */,
+				FBE61AAA2DA034030069B2C4 /* pantalla_personajes.swift in Sources */,
 				FB2D59CB2D91B49C00C4D7DF /* placeholder_api.swift in Sources */,
 				FB9B38282D9704690057C2D2 /* perfil_vista_basica.swift in Sources */,
 				FB2D59BA2D91B07D00C4D7DF /* ContentView.swift in Sources */,
+				FBE61AA22DA0312C0069B2C4 /* transformacion.swift in Sources */,
 				FB9B38252D9700F50057C2D2 /* perfil.swift in Sources */,
+				FBE61AA72DA032610069B2C4 /* pagina_resultados.swift in Sources */,
 				FB2D59C92D91B25500C4D7DF /* Publicacion.swift in Sources */,
+				FBE61AA42DA031710069B2C4 /* dragonball_api.swift in Sources */,
 				FB9A25F92D94633A00F6F507 /* comentario.swift in Sources */,
+				FBE61A9E2DA030970069B2C4 /* mono_chino.swift in Sources */,
 				FBBCD5F72D945E880025B4C5 /* publicacion.swift in Sources */,
 				FB2D59CF2D91BC4100C4D7DF /* controlador_publicaciones.swift in Sources */,
 				FB2D59B82D91B07D00C4D7DF /* RedesSocialesApp.swift in Sources */,
+				FBE61AA02DA030EF0069B2C4 /* planeta.swift in Sources */,
 				FB2D59CD2D91B4AA00C4D7DF /* errores.swift in Sources */,
 				FBBCD5F52D94534E0025B4C5 /* controlador_app.swift in Sources */,
 			);

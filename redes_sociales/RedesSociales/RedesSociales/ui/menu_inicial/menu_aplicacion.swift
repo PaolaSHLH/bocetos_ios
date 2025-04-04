@@ -16,11 +16,10 @@ struct MenuNavegacion: View{
                 }
                 .badge(controlador.publicaciones.count)
             
-            Text("Hola 2")
-                .tabItem { 
+            PantallaPersonajes()
+                .tabItem {
                     Label{
-                    Text("Hola mundo desde abajo")
-                    Text("esto es un segundo click")
+                    Text("Dragon Ball DB")
             
                     } icon: {
                         Circle()

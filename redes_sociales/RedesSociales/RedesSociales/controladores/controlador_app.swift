@@ -18,12 +18,17 @@ public class ControladorAplicacion{
     
     var publicacion_seleccionada: Publicacion? = nil
     var perfil_a_mostrar: Perfil? = nil
+    
+    //seccion dragon ball
+    var pagina_resultados: PaginaResultado? = nil
 
     
     
     init(){
         Task.detached(priority: .high){
             await self.descargar_publicaciones()
+            
+            await self.descargar_monos_chinos()
         }
     }
     
@@ -34,6 +39,12 @@ public class ControladorAplicacion{
         guard let publicaciones_descargadas: [Publicacion] = try? await PlaceHolderAPI().descargar_publicaciones()
         else {return}
                 publicaciones = publicaciones_descargadas
+    }
+    
+    func descargar_monos_chinos() async{
+        guard let pagina_descargada: PaginaResultado = try? await DragonBallAPI().descargar_pagina_personajes() else {return}
+        
+        self.pagina_resultados = pagina_descargada
     }
     
     func descargar_comentarios() async{
