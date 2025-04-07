@@ -11,31 +11,53 @@ struct PantallaPersonajes: View {
     @Environment(ControladorAplicacion.self) var controlador
     
     var body: some View {
-        ScrollView{
-            LazyVStack(spacing: 20){
-                if(controlador.pagina_resultados != nil){
-                    ForEach(controlador.pagina_resultados!.items){ personaje in
-                        Text("\(personaje.name)")
-                        AsyncImage(url: URL(string: personaje.image)){imagen in
-                            imagen.image?
-                                .resizable()
-                                .scaledToFit()
-                                
-                        }.frame(width: 150, height: 200)
-                            
-                        
-                        HStack{
-                            Text("\(personaje.race)")
-                            Text("\(personaje.gender)")
-                        }
-                        .font(.subheadline)
-                    }
-                   
+        NavigationStack{
+            
+            ScrollView{
+                LazyVStack(spacing: 20){
+                    if(controlador.pagina_resultados != nil){
+                        ForEach(controlador.pagina_resultados!.items){ personaje in
+                            NavigationLink{
+                                pantallaDescripcion()
+                            } label:{
+                                VStack{
                     
-                }
-                
-            }
-        }
+                                    HStack{
+                                        AsyncImage(url: URL(string: personaje.image)){imagen in
+                                            imagen.image?
+                                                .resizable()
+                                                .scaledToFit()
+                                                
+                                        }.frame(width: 150, height: 200)
+                                        
+                                        VStack{
+                                            Text("\(personaje.name)")
+                                                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                            
+                                            Text("\(personaje.race)")
+                                            Text("\(personaje.gender)")
+                                            
+                                        }
+                                        
+                                    }
+                                    .font(.subheadline)
+                                }
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .background(Color.blue)
+                                .cornerRadius(12)
+                                .foregroundColor(.black)
+                            }/* Aqui termina el Nav link*/
+                            .simultaneousGesture(TapGesture().onEnded({
+                                  controlador.seleccionar_personaje(personaje) }))
+                            .padding()
+                        }/* Aqui termina el ForEach*/
+                    }/* Aqui termina el if*/
+                }/* Aqui termina el lazyVstack*/
+            }/* Aqui termina el scrollView*/
+            .background(Color.orange)
+        }/* Aqui termina el Nav stack*/
+        
     }
 }
 

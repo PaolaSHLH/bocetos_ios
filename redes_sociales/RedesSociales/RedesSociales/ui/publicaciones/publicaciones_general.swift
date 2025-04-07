@@ -44,7 +44,7 @@ struct GenerarPublicaciones : View {
                                 .cornerRadius(10)
                                 .padding()
                         }.simultaneousGesture(TapGesture().onEnded({
-                            controlador.seleccionar_publicacion(publicacion)                            }))
+                            controlador.seleccionar_publicacion(publicacion)}))
                     }
                 }
             }.background(Color.white)

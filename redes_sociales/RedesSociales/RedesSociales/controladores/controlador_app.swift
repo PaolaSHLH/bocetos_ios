@@ -21,6 +21,8 @@ public class ControladorAplicacion{
     
     //seccion dragon ball
     var pagina_resultados: PaginaResultado? = nil
+    
+    var personaje_seleccionado: MonoChino? = nil
 
     
     
@@ -64,6 +66,10 @@ public class ControladorAplicacion{
             await  self.descargar_comentarios()
         })
         
+    }
+    
+    func seleccionar_personaje (_ personaje: MonoChino)-> Void{
+        personaje_seleccionado = personaje
     }
     
     func descargar_perfil(id:Int) async -> Void{

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB283BB02DA4281C00896C09 /* pantalla_descripcion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB283BAF2DA4281C00896C09 /* pantalla_descripcion.swift */; };
 		FB2D59B82D91B07D00C4D7DF /* RedesSocialesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2D59B72D91B07D00C4D7DF /* RedesSocialesApp.swift */; };
 		FB2D59BA2D91B07D00C4D7DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2D59B92D91B07D00C4D7DF /* ContentView.swift */; };
 		FB2D59BC2D91B07E00C4D7DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2D59BB2D91B07E00C4D7DF /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB283BAF2DA4281C00896C09 /* pantalla_descripcion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pantalla_descripcion.swift; sourceTree = "<group>"; };
 		FB2D59B42D91B07D00C4D7DF /* RedesSociales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedesSociales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2D59B72D91B07D00C4D7DF /* RedesSocialesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedesSocialesApp.swift; sourceTree = "<group>"; };
 		FB2D59B92D91B07D00C4D7DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				FBE61AA92DA034030069B2C4 /* pantalla_personajes.swift */,
+				FB283BAF2DA4281C00896C09 /* pantalla_descripcion.swift */,
 			);
 			path = dragon_ball;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				FBBCD5F72D945E880025B4C5 /* publicacion.swift in Sources */,
 				FB2D59CF2D91BC4100C4D7DF /* controlador_publicaciones.swift in Sources */,
 				FB2D59B82D91B07D00C4D7DF /* RedesSocialesApp.swift in Sources */,
+				FB283BB02DA4281C00896C09 /* pantalla_descripcion.swift in Sources */,
 				FBE61AA02DA030EF0069B2C4 /* planeta.swift in Sources */,
 				FB2D59CD2D91B4AA00C4D7DF /* errores.swift in Sources */,
 				FBBCD5F52D94534E0025B4C5 /* controlador_app.swift in Sources */,
