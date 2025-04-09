@@ -49,7 +49,9 @@ struct PantallaPersonajes: View {
                                 .foregroundColor(.black)
                             }/* Aqui termina el Nav link*/
                             .simultaneousGesture(TapGesture().onEnded({
-                                  controlador.seleccionar_personaje(personaje) }))
+                                 controlador.seleccionar_personaje(personaje)
+                                /*controlador.descargar_informacion_personaje(id: personaje.id)*/
+                                  }))
                             .padding()
                         }/* Aqui termina el ForEach*/
                     }/* Aqui termina el if*/
