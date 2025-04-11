@@ -18,8 +18,10 @@ struct pantallaDescripcion: View {
             VStack{
                 Text("\(controlador.personaje_seleccionado?.name ?? "Valor por defecto")")
                     .padding()
+                    .frame(width: 250)
                     .background(Color.white)
                     .cornerRadius(12)
+                    
                     
                 Spacer()
                 if let url = URL(string: controlador.personaje_seleccionado?.image ?? "") {
@@ -33,15 +35,18 @@ struct pantallaDescripcion: View {
                 
                 HStack{
                     Spacer()
-                    Text("\(controlador.personaje_seleccionado?.name ?? "Valor por defecto")")
+                    Text("\(controlador.personaje_seleccionado?.gender ?? "Valor por defecto")")
                         .padding()
+                        .frame(width: 150)
                         .background(Color.white)
                         .cornerRadius(12)
                     Spacer()
-                    Text("\(controlador.personaje_seleccionado?.gender ?? "Valor por defecto")")
+                    Text("\(controlador.personaje_seleccionado?.affiliation ?? "Valor por defecto")")
                         .padding()
+                        .frame(width: 150)
                         .background(Color.white)
                         .cornerRadius(12)
+                        
                     Spacer()
                 }/*este es el fin del Hstack*/
                 
@@ -51,29 +56,27 @@ struct pantallaDescripcion: View {
                     Spacer()
                     Text("\(controlador.personaje_seleccionado?.ki ?? "Valor por defecto")")
                         .padding()
+                        .frame(maxWidth: 150)
                         .background(Color.white)
                         .cornerRadius(12)
+                        
                     Spacer()
                     Text("\(controlador.personaje_seleccionado?.maxKi ??  "Valor por defecto")")
                         .padding()
+                        .frame(maxWidth: 150)
                         .background(Color.white)
                         .cornerRadius(12)
+                        
                     Spacer()
                 }
                 
-                HStack{
-                    Spacer()
-                    Text("\(controlador.personaje_seleccionado?.affiliation ?? "Valor por defecto")")
+                    Text("Plantea de Origen: \(controlador.personaje_seleccionado?.originPlanet?.name ?? "Valor por defecto")")
                         .padding()
+                        .frame(maxWidth: .infinity)
                         .background(Color.white)
                         .cornerRadius(12)
+                        
                     Spacer()
-                    Text("\(controlador.personaje_seleccionado?.originPlanet?.name ?? "Valor por defecto")")
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(12)
-                    Spacer()
-                }
                 
                 
                 Spacer()
@@ -81,7 +84,7 @@ struct pantallaDescripcion: View {
                     .padding()
                     .background(Color.white)
                     .cornerRadius(12)
-                
+                    .frame(maxWidth: .infinity)
                 
                 //Text("\(controlador.personaje_seleccionado?.transformations?.name ?? "Valor por defecto")")
                 

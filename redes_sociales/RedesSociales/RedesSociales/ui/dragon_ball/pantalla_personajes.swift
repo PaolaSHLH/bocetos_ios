@@ -46,7 +46,7 @@ struct PantallaPersonajes: View {
                                 .frame(maxWidth: .infinity)
                                 .background(Color.blue)
                                 .cornerRadius(12)
-                                .foregroundColor(.black)
+                                .foregroundColor(.white)
                             }/* Aqui termina el Nav link*/
                             .simultaneousGesture(TapGesture().onEnded({
                                  controlador.seleccionar_personaje(personaje)
