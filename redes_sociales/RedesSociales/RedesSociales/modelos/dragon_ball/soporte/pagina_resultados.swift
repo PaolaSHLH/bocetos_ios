@@ -29,3 +29,14 @@ struct PaginaResultado: Codable //, Identifiable //
     let meta: Meta
     let links: Enlaces
 }
+struct PaginaResultadoPlaneta: Codable //, Identifiable //
+{
+    //var id = self.meta.currentPage
+    let items: [MonoChino]
+    let meta: Meta
+    let links: Enlaces
+}
+/*class ItemAPI: Identifiable, Codable{
+    var id : { Int {get}
+    
+}*/

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0CD3382DBFDCD000C5D487 /* pantalla_planeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CD3372DBFDCD000C5D487 /* pantalla_planeta.swift */; };
 		FB283BB02DA4281C00896C09 /* pantalla_descripcion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB283BAF2DA4281C00896C09 /* pantalla_descripcion.swift */; };
 		FB2D59B82D91B07D00C4D7DF /* RedesSocialesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2D59B72D91B07D00C4D7DF /* RedesSocialesApp.swift */; };
 		FB2D59BA2D91B07D00C4D7DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2D59B92D91B07D00C4D7DF /* ContentView.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB0CD3372DBFDCD000C5D487 /* pantalla_planeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pantalla_planeta.swift; sourceTree = "<group>"; };
 		FB283BAF2DA4281C00896C09 /* pantalla_descripcion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pantalla_descripcion.swift; sourceTree = "<group>"; };
 		FB2D59B42D91B07D00C4D7DF /* RedesSociales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedesSociales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2D59B72D91B07D00C4D7DF /* RedesSocialesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedesSocialesApp.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			children = (
 				FBE61AA92DA034030069B2C4 /* pantalla_personajes.swift */,
 				FB283BAF2DA4281C00896C09 /* pantalla_descripcion.swift */,
+				FB0CD3372DBFDCD000C5D487 /* pantalla_planeta.swift */,
 			);
 			path = dragon_ball;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				FBBA08532D9AECA200890170 /* menu_aplicacion.swift in Sources */,
 				FB2D59D32D91BE1900C4D7DF /* publicaciones_general.swift in Sources */,
 				FBE61AAA2DA034030069B2C4 /* pantalla_personajes.swift in Sources */,
+				FB0CD3382DBFDCD000C5D487 /* pantalla_planeta.swift in Sources */,
 				FB2D59CB2D91B49C00C4D7DF /* placeholder_api.swift in Sources */,
 				FB9B38282D9704690057C2D2 /* perfil_vista_basica.swift in Sources */,
 				FB2D59BA2D91B07D00C4D7DF /* ContentView.swift in Sources */,

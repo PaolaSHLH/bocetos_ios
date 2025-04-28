@@ -13,93 +13,116 @@ struct pantallaDescripcion: View {
     @Environment(ControladorAplicacion.self) var controlador
     
     var body: some View {
-        
-        ScrollView{
-            VStack{
-                Text("\(controlador.personaje_seleccionado?.name ?? "Valor por defecto")")
-                    .padding()
-                    .frame(width: 250)
-                    .background(Color.white)
-                    .cornerRadius(12)
-                    
-                    
-                Spacer()
-                if let url = URL(string: controlador.personaje_seleccionado?.image ?? "") {
-                    AsyncImage(url: url) { imagen in
-                        imagen.image?
-                            .resizable()
-                            .scaledToFit()
+        NavigationStack{
+            ScrollView{
+                VStack{
+                    Text("\(controlador.personaje_seleccionado?.name ?? "Valor por defecto")")
+                        .padding()
+                        .frame(width: 250)
+                        .background(Color.white)
+                        .cornerRadius(12)
+                        
+                        
+                    Spacer()
+                    if let url = URL(string: controlador.personaje_seleccionado?.image ?? "") {
+                        AsyncImage(url: url) { imagen in
+                            imagen.image?
+                                .resizable()
+                                .scaledToFit()
+                        }
+                        .frame(width: 150, height: 200)
                     }
-                    .frame(width: 150, height: 200)
-                }
-                
-                HStack{
+                    
+                    HStack{
+                        Spacer()
+                        Text("\(controlador.personaje_seleccionado?.gender ?? "Valor por defecto")")
+                            .padding()
+                            .frame(width: 150)
+                            .background(Color.white)
+                            .cornerRadius(12)
+                        Spacer()
+                        Text("\(controlador.personaje_seleccionado?.affiliation ?? "Valor por defecto")")
+                            .padding()
+                            .frame(width: 150)
+                            .background(Color.white)
+                            .cornerRadius(12)
+                            
+                        Spacer()
+                    }/*este es el fin del Hstack*/
+                    
                     Spacer()
-                    Text("\(controlador.personaje_seleccionado?.gender ?? "Valor por defecto")")
+                    
+                    HStack{
+                        Spacer()
+                        Text("\(controlador.personaje_seleccionado?.ki ?? "Valor por defecto")")
+                            .padding()
+                            .frame(maxWidth: 150)
+                            .background(Color.white)
+                            .cornerRadius(12)
+                            
+                        Spacer()
+                        Text("\(controlador.personaje_seleccionado?.maxKi ??  "Valor por defecto")")
+                            .padding()
+                            .frame(maxWidth: 150)
+                            .background(Color.white)
+                            .cornerRadius(12)
+                            
+                        Spacer()
+                    }
+                    
+                    if let planeta = controlador.personaje_seleccionado?.originPlanet {
+                        NavigationLink(destination: pantallaPlaneta(planeta: planeta)) {
+                            Text("Planeta de Origen: \(planeta.name)")
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .background(Color.white)
+                                .cornerRadius(12)
+                        }
+                    } else {
+                        Text("Planeta de Origen: Desconocido")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.white)
+                            .cornerRadius(12)
+                    }
+                        Spacer()
+                    
+                   // NavigationLink
+                    //{
+                        Text("Transformaciones")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.white)
+                            .cornerRadius(12)
+                    //}
+                    //.simultaneousGesture(TapGesture().onEnded({
+                         //controlador.seleccionar_personaje(personaje)
+                    Spacer()
+                    
+                    
+                    Spacer()
+                    Text("\(controlador.personaje_seleccionado?.description ?? "Valor por defecto")")
                         .padding()
-                        .frame(width: 150)
                         .background(Color.white)
                         .cornerRadius(12)
-                    Spacer()
-                    Text("\(controlador.personaje_seleccionado?.affiliation ?? "Valor por defecto")")
-                        .padding()
-                        .frame(width: 150)
-                        .background(Color.white)
-                        .cornerRadius(12)
-                        
-                    Spacer()
-                }/*este es el fin del Hstack*/
-                
-                Spacer()
-                
-                HStack{
-                    Spacer()
-                    Text("\(controlador.personaje_seleccionado?.ki ?? "Valor por defecto")")
-                        .padding()
-                        .frame(maxWidth: 150)
-                        .background(Color.white)
-                        .cornerRadius(12)
-                        
-                    Spacer()
-                    Text("\(controlador.personaje_seleccionado?.maxKi ??  "Valor por defecto")")
-                        .padding()
-                        .frame(maxWidth: 150)
-                        .background(Color.white)
-                        .cornerRadius(12)
-                        
-                    Spacer()
-                }
-                
-                    Text("Plantea de Origen: \(controlador.personaje_seleccionado?.originPlanet?.name ?? "Valor por defecto")")
-                        .padding()
                         .frame(maxWidth: .infinity)
-                        .background(Color.white)
-                        .cornerRadius(12)
-                        
-                    Spacer()
-                
-                
-                Spacer()
-                Text("\(controlador.personaje_seleccionado?.description ?? "Valor por defecto")")
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(12)
-                    .frame(maxWidth: .infinity)
-                
-                //Text("\(controlador.personaje_seleccionado?.transformations?.name ?? "Valor por defecto")")
-                
-                
-            }/*este es el Vstack*/
+                    
+                    //Text("\(controlador.personaje_seleccionado?.transformations?.name ?? "Valor por defecto")")
+                    
+                    
+                }/*este es el Vstack*/
+                .padding()
+                .background(Color.blue)
+                .frame(maxWidth: .infinity)
+                .background(Color.blue)
+                .cornerRadius(12)
+            }/*este es el Scroll View*/
             .padding()
-            .background(Color.blue)
-            .frame(maxWidth: .infinity)
-            .background(Color.blue)
-            .cornerRadius(12)
-        }/*este es el Scroll View*/
-        .padding()
-        .background(Color.orange)
+            .background(Color.orange)
+            
+        }
+        }
         
-    }
 }
 
 #Preview {

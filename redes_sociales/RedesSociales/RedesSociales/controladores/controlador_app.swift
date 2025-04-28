@@ -24,6 +24,7 @@ public class ControladorAplicacion{
     
     //var personaje: MonoChino? = nil
     var personaje_seleccionado: MonoChino? = nil
+    var planeta_del_personaje: Planeta? = nil
 
     
     
@@ -86,6 +87,7 @@ public class ControladorAplicacion{
     func seleccionar_personaje (_ personaje: MonoChino)-> Void{
         personaje_seleccionado = personaje
         descargar_informacion_personaje(id: personaje.id)
+        planeta_del_personaje = personaje.originPlanet
     }
     
     func descargar_perfil(id:Int) async -> Void{
