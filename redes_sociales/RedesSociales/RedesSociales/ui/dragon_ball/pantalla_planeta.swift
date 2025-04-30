@@ -14,35 +14,41 @@ struct pantallaPlaneta: View {
     @Environment (ControladorAplicacion.self) var controlador
     
     var body: some View {
-        NavigationStack{
+        
             
             ScrollView{
                 VStack(){
                     Text("Planeta de origen")
-                        .font(.title)
+                        .font(.largeTitle)
                         .foregroundColor(.white)
                     
                     Text(planeta.name)
+                        .font(.title)
+                        .foregroundColor(.white)
+                        //.font(.custom ("SF Pro", size: 50))
+                        
+                    Text(planeta.description)
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(12)
+                        .frame(maxWidth: .infinity)
+                        .padding()
                     
                     if let url = URL(string: planeta.image) {
                         AsyncImage(url: url) { imagen in
                             imagen.image?
                                 .resizable()
                                 .scaledToFit()
+                                .cornerRadius(12)
                         }
-                        .frame(width: 150, height: 200)
+                        .frame(width: 350, height: 400)
                     }
                     
                     
-                    
-                    Text(planeta.description)
-                    
-                    
-                    
                 }/* Aqui termina el scrollView*/
-                .background(Color.orange)
-            }/* Aqui termina el Nav stack*/
         }
+            .background(Color.orange)
+            .frame(width: .infinity)
     }
 }
 

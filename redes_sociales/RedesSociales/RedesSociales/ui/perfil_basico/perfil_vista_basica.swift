@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct PerfilBasicovista : View {
     @Environment(ControladorAplicacion.self) var controlador

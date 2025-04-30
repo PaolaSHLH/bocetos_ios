@@ -15,8 +15,8 @@ struct PantallaPersonajes: View {
             
             ScrollView{
                 LazyVStack(spacing: 20){
-                    Text("Personajes de dragon ball")
-                        .font(.title)
+                    Text("Dragon ball")
+                        .font(.largeTitle)
                         .foregroundColor(.white)
                     if(controlador.pagina_resultados != nil){
                         ForEach(controlador.pagina_resultados!.items){ personaje in

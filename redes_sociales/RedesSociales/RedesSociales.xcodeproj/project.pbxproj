@@ -18,6 +18,8 @@
 		FB2D59CD2D91B4AA00C4D7DF /* errores.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2D59CC2D91B4AA00C4D7DF /* errores.swift */; };
 		FB2D59CF2D91BC4100C4D7DF /* controlador_publicaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2D59CE2D91BC4100C4D7DF /* controlador_publicaciones.swift */; };
 		FB2D59D32D91BE1900C4D7DF /* publicaciones_general.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2D59D22D91BE1900C4D7DF /* publicaciones_general.swift */; };
+		FB461D842DC27A3D00796387 /* contentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB461D832DC27A3D00796387 /* contentView.swift */; };
+		FB461D862DC281FB00796387 /* pantalla_transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB461D852DC281FB00796387 /* pantalla_transform.swift */; };
 		FB9A25F92D94633A00F6F507 /* comentario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9A25F82D94633A00F6F507 /* comentario.swift */; };
 		FB9B38252D9700F50057C2D2 /* perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9B38242D9700F50057C2D2 /* perfil.swift */; };
 		FB9B38282D9704690057C2D2 /* perfil_vista_basica.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9B38272D9704690057C2D2 /* perfil_vista_basica.swift */; };
@@ -45,6 +47,8 @@
 		FB2D59CC2D91B4AA00C4D7DF /* errores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errores.swift; sourceTree = "<group>"; };
 		FB2D59CE2D91BC4100C4D7DF /* controlador_publicaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_publicaciones.swift; sourceTree = "<group>"; };
 		FB2D59D22D91BE1900C4D7DF /* publicaciones_general.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicaciones_general.swift; sourceTree = "<group>"; };
+		FB461D832DC27A3D00796387 /* contentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contentView.swift; sourceTree = "<group>"; };
+		FB461D852DC281FB00796387 /* pantalla_transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pantalla_transform.swift; sourceTree = "<group>"; };
 		FB9A25F82D94633A00F6F507 /* comentario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comentario.swift; sourceTree = "<group>"; };
 		FB9B38242D9700F50057C2D2 /* perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil.swift; sourceTree = "<group>"; };
 		FB9B38272D9704690057C2D2 /* perfil_vista_basica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil_vista_basica.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				FB9B38272D9704690057C2D2 /* perfil_vista_basica.swift */,
+				FB461D832DC27A3D00796387 /* contentView.swift */,
 			);
 			path = perfil_basico;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 				FBE61AA92DA034030069B2C4 /* pantalla_personajes.swift */,
 				FB283BAF2DA4281C00896C09 /* pantalla_descripcion.swift */,
 				FB0CD3372DBFDCD000C5D487 /* pantalla_planeta.swift */,
+				FB461D852DC281FB00796387 /* pantalla_transform.swift */,
 			);
 			path = dragon_ball;
 			sourceTree = "<group>";
@@ -280,6 +286,7 @@
 				FB0CD3382DBFDCD000C5D487 /* pantalla_planeta.swift in Sources */,
 				FB2D59CB2D91B49C00C4D7DF /* placeholder_api.swift in Sources */,
 				FB9B38282D9704690057C2D2 /* perfil_vista_basica.swift in Sources */,
+				FB461D842DC27A3D00796387 /* contentView.swift in Sources */,
 				FB2D59BA2D91B07D00C4D7DF /* ContentView.swift in Sources */,
 				FBE61AA22DA0312C0069B2C4 /* transformacion.swift in Sources */,
 				FB9B38252D9700F50057C2D2 /* perfil.swift in Sources */,
@@ -288,6 +295,7 @@
 				FBE61AA42DA031710069B2C4 /* dragonball_api.swift in Sources */,
 				FB9A25F92D94633A00F6F507 /* comentario.swift in Sources */,
 				FBE61A9E2DA030970069B2C4 /* mono_chino.swift in Sources */,
+				FB461D862DC281FB00796387 /* pantalla_transform.swift in Sources */,
 				FBBCD5F72D945E880025B4C5 /* publicacion.swift in Sources */,
 				FB2D59CF2D91BC4100C4D7DF /* controlador_publicaciones.swift in Sources */,
 				FB2D59B82D91B07D00C4D7DF /* RedesSocialesApp.swift in Sources */,

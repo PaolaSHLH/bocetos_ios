@@ -25,6 +25,7 @@ public class ControladorAplicacion{
     //var personaje: MonoChino? = nil
     var personaje_seleccionado: MonoChino? = nil
     var planeta_del_personaje: Planeta? = nil
+   // var transformaciones_pers: Transformacion =? nil
 
     
     
@@ -88,6 +89,7 @@ public class ControladorAplicacion{
         personaje_seleccionado = personaje
         descargar_informacion_personaje(id: personaje.id)
         planeta_del_personaje = personaje.originPlanet
+      //  transformaciones_pers = personaje.transformations
     }
     
     func descargar_perfil(id:Int) async -> Void{

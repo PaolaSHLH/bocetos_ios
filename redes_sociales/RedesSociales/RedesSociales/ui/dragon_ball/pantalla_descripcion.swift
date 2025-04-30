@@ -75,28 +75,35 @@ struct pantallaDescripcion: View {
                             Text("Planeta de Origen: \(planeta.name)")
                                 .padding()
                                 .frame(maxWidth: .infinity)
-                                .background(Color.white)
+                                .foregroundColor(.black)
+                                .background(Color.mint)
                                 .cornerRadius(12)
                         }
                     } else {
                         Text("Planeta de Origen: Desconocido")
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .background(Color.white)
+                            .background(Color.mint)
                             .cornerRadius(12)
                     }
                         Spacer()
                     
-                   // NavigationLink
-                    //{
-                        Text("Transformaciones")
+                    if let transformaciones = controlador.personaje_seleccionado?.transformations {
+                        NavigationLink(destination: pantallaTransform(transformaciones: transformaciones)) {
+                            Text("Transformaciones")
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .background(Color.teal)
+                                .cornerRadius(12)
+                        }
+                    } else {
+                        Text("Este personaje no tiene transformaciones")
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .background(Color.white)
+                            .background(Color.gray)
                             .cornerRadius(12)
-                    //}
-                    //.simultaneousGesture(TapGesture().onEnded({
-                         //controlador.seleccionar_personaje(personaje)
+                    }
+                    
                     Spacer()
                     
                     
