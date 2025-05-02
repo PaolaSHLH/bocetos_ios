@@ -95,6 +95,7 @@ struct pantallaDescripcion: View {
                                 .frame(maxWidth: .infinity)
                                 .background(Color.teal)
                                 .cornerRadius(12)
+                                .foregroundColor(.black)
                         }
                     } else {
                         Text("Este personaje no tiene transformaciones")

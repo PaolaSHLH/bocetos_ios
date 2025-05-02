@@ -25,6 +25,7 @@ public class ControladorAplicacion{
     //var personaje: MonoChino? = nil
     var personaje_seleccionado: MonoChino? = nil
     var planeta_del_personaje: Planeta? = nil
+    var lista_de_planetas: PaginaResultadoPlaneta? = nil
    // var transformaciones_pers: Transformacion =? nil
 
     
@@ -90,6 +91,12 @@ public class ControladorAplicacion{
         descargar_informacion_personaje(id: personaje.id)
         planeta_del_personaje = personaje.originPlanet
       //  transformaciones_pers = personaje.transformations
+    }
+    
+    func descargar_planetas() async {
+        guard let lista_descargada: PaginaResultadoPlaneta = try? await DragonBallAPI().descargar_lista_planetas() else {return}
+        
+        self.lista_de_planetas = lista_descargada
     }
     
     func descargar_perfil(id:Int) async -> Void{

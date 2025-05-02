@@ -29,8 +29,11 @@ struct MenuNavegacion: View{
                     }
                 }
             
-            Text("Hola desde pantalla 3")
-                .tabItem { Label("Etiqueta de esta label", systemImage: "trash")
+            pantallasListaPlanetas()
+                .tabItem { Label("Planetas", systemImage: "trash")
+                }
+            PerfilBasicovista()
+                .tabItem { Label("Usuario", systemImage: "trash")
                 }
           /*  Tab("Etiqueta", systemImage : "perfil"){
                 Text("Referencia a la pantalla")

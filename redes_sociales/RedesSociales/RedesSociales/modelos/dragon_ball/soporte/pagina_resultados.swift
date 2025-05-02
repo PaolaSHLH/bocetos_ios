@@ -32,7 +32,7 @@ struct PaginaResultado: Codable //, Identifiable //
 struct PaginaResultadoPlaneta: Codable //, Identifiable //
 {
     //var id = self.meta.currentPage
-    let items: [MonoChino]
+    let items: [Planeta]
     let meta: Meta
     let links: Enlaces
 }
