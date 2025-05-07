@@ -28,6 +28,11 @@ class DragonBallAPI: Codable {
         return await descargar(recurso: ubicacion_recurso)
     }
     
+    func descargar_informacion_planeta(id: Int) async -> Planeta? {
+            let ubicacion_recurso = "/planets/\(id)"
+            return await descargar(recurso: ubicacion_recurso)
+    }
+    
     func descargar<TipoGenerico:Codable>(recurso: String) async -> TipoGenerico?{
         do{
             guard let url = URL(string: "\(url_base)\(recurso)") else {throw ErroresDeRed.badUrl}

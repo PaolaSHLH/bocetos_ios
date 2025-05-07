@@ -17,23 +17,14 @@ struct MenuNavegacion: View{
                 .badge(controlador.publicaciones.count)
             
             PantallaPersonajes()
-                .tabItem {
-                    Label{
-                    Text("Dragon Ball DB")
-            
-                    } icon: {
-                        Circle()
-                            .frame(width: 44, height: 44,
-                                alignment: .center)
-                            .overlay(Text("s"))
+                .tabItem {Label("Dragon Ball DB", systemImage : "person.bust")
                     }
-                }
             
             pantallasListaPlanetas()
-                .tabItem { Label("Planetas", systemImage: "trash")
+                .tabItem { Label("Planetas", systemImage: "moon.stars")
                 }
             PerfilBasicovista()
-                .tabItem { Label("Usuario", systemImage: "trash")
+                .tabItem { Label("Usuario", systemImage: "person")
                 }
           /*  Tab("Etiqueta", systemImage : "perfil"){
                 Text("Referencia a la pantalla")

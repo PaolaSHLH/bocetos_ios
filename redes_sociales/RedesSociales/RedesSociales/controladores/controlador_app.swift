@@ -26,6 +26,7 @@ public class ControladorAplicacion{
     var personaje_seleccionado: MonoChino? = nil
     var planeta_del_personaje: Planeta? = nil
     var lista_de_planetas: PaginaResultadoPlaneta? = nil
+    var planeta_seleccionado: Planeta? = nil
    // var transformaciones_pers: Transformacion =? nil
 
     
@@ -35,6 +36,8 @@ public class ControladorAplicacion{
             await self.descargar_publicaciones()
             
             await self.descargar_monos_chinos()
+            
+            await self.descargar_planetas()
         }
     }
     
@@ -99,6 +102,23 @@ public class ControladorAplicacion{
         self.lista_de_planetas = lista_descargada
     }
     
+    /*parte de los planetas*/
+    
+    func descargar_info_planeta(id: Int) async {
+        guard let planeta: Planeta = try? await DragonBallAPI().descargar_informacion_planeta(id: id) else { return }
+        self.planeta_seleccionado = planeta
+    }
+    func descargar_informacion_planeta(id: Int) {
+        Task.detached {
+            await self.descargar_info_planeta(id: id)
+        }
+    }
+    func seleccionar_planeta(_ planeta: Planeta) {
+        planeta_seleccionado = planeta
+        descargar_informacion_planeta(id: planeta.id)
+    }
+    
+
     func descargar_perfil(id:Int) async -> Void{
         guard let perfil:Perfil = try? await PlaceHolderAPI().descargar_perfil(id: id) else {return}
         perfil_a_mostrar = perfil

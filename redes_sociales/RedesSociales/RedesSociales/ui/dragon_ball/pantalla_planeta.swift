@@ -25,7 +25,7 @@ struct pantallaPlaneta: View {
                     Text(planeta.name)
                         .font(.title)
                         .foregroundColor(.white)
-                        //.font(.custom ("SF Pro", size: 50))
+                        
                         
                     Text(planeta.description)
                         .padding()
@@ -45,8 +45,8 @@ struct pantallaPlaneta: View {
                     }
                     
                     
-                }/* Aqui termina el scrollView*/
-        }
+                }/*Aqui termina el Vstack*/
+        }/* Aqui termina el scrollView*/
             .background(Color.orange)
             .frame(width: .infinity)
     }
